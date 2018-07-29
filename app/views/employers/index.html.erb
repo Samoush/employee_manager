@@ -1,0 +1,44 @@
+<%= stylesheet_link_tag "style" %>
+<head>
+  <%= render 'navigation' %>
+
+  <div class='title_box'>
+    <h1 id='title'>Auftraggeber</h1>  
+  </div>
+</head>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Kontakt Person</th>
+      <th>Telefon</th>
+      <th>Email</th>
+      <th>Webseite</th>
+      <th>Nachtzuschlag</th>
+      <th>Sonntagszuschlag</th>
+      <th>Feiertagszuschlag</th>
+      <th colspan="2">Aktionen</th>
+    </tr>  
+  </thead>
+
+  <tbody>  
+    <% @employers.each do |employer| %>
+      <tr>
+        <td><%= employer.name %></td>
+        <td><%= employer.address %></td>
+        <td><%= employer.contact_person %></td>
+        <td><%= employer.telephone %></td>
+        <td><%= employer.email %></td>
+        <td><%= employer.website %></td>
+        <td><%= employer.night_addition_in_percent %></td>
+        <td><%= employer.sunday_addition_in_percent %></td>
+        <td><%= employer.holiday_addition_in_percent %></td>
+        <td><%= link_to 'Bearbeiten', edit_employer_path(id: employer) %></td>
+        <td><%= link_to 'Löschen', employer, method: :delete, data: { confirm: 'Sind Sie sich sicher?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</br>

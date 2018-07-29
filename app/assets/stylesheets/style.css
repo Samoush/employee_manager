@@ -1,0 +1,228 @@
+/* Navigation */
+
+#navbar {
+    overflow: hidden;
+    background: linear-gradient(to right, #e6f0ff, white);
+    /* background-color: #333; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#dropdwn, #btn_link {
+    float: left;
+    overflow: hidden;
+}
+
+#dropdwn #dropdwn_btn {
+    font-size: 20px;    
+    border: none;
+    outline: none;
+    color: red;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+#navbar #btn_link #btn {
+    font-size: 20px;    
+    border: none;
+    color: red;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    outline: none;
+}
+
+/* glaube nicht mehr benötigt */
+!important: #btn:focus i { 
+	outline: none!important; 
+	border: none!important; 
+}
+
+
+#navbar a:hover, #dropdwn:hover #dropdwn_btn {
+    background-color: #aFEEEE;
+    transition: 0.5s;
+}
+
+#navbar #btn_link:hover #btn {
+		background-color: #aFEEEE;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#dropdwn_content {
+		/* den content hier bei default nicht anzeigen */
+    display: none;
+    /* Positionierung muss absolut sein um den z-index setzen zu können */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#dropdwn_content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+#dropdwn_content a:hover {
+    background-color: #ddd;
+}
+
+/* den content erst beim drübergehen als block zeigen */
+#dropdwn:hover #dropdwn_content {
+    display: block;
+}
+
+#wrapper {
+	padding-top: 60px;
+}
+
+#logo {
+	height: 52px;
+	float: right;
+}
+
+/* Formular */
+
+#title {  
+	font-size: 25px;
+  color: #008080;
+  text-align: left;
+}
+
+.title_box {
+  width: 94%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.formular {
+	margin: auto;
+	width: 80%;
+
+	border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+abbr {
+	text-decoration: none;
+	visibility: hidden;
+}
+
+input[type=text] {
+  width: 50%;
+
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=tel] {
+  width: 50%;
+  
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=email] {
+  width: 50%;
+
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=number] {
+  width: 12%; 
+
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  /* move labels to the left and inputs to the right */
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+input:focus {
+    border: 3px solid #555;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 18%;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #00802b;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 18%;
+}
+
+/* clear */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Index */
+
+.table {
+	margin: 0 auto;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 95%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.table th, .table td {
+	border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr th {
+	font-size: 15px;
+	text-align: center;
+	padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #008080;
+  color: white;
+}
+
+.table tr td {
+	text-align: left;
+}
+
+.table tr:hover {
+	background-color: #ddd;
+}

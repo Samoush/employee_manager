@@ -1,0 +1,39 @@
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Employee Manager</title>
+<div id='navbar'>
+<%= image_tag "logo.jpg", id: 'logo' %>
+<div id='btn_link'>
+  <button id="btn" onclick="location.href='index.html';">
+    <i class="fa fa-home"></i> Home
+  </button>
+</div>
+<div id='btn_link'>
+  <button id="btn" onclick="location.href='index.html';">
+    <i class="fa fa-bar-chart"></i> Arbeitszeit Historie
+  </button>
+</div>
+
+
+<div id='dropdwn'>
+  <button id='dropdwn_btn'>Auftraggeber
+    <i class="fas fa-caret-down"></i>
+  </button>
+  <div id='dropdwn_content'>
+  	<%= link_to "Neuer Auftraggeber", new_employer_path %>
+    <%= link_to "Aktuelle Auftraggeber", employers_path %>
+  </div>
+</div>
+
+<div id='dropdwn'>
+  <button id='dropdwn_btn'>Mitarbeiter
+    <i class="fas fa-caret-down"></i>
+  </button>
+  <div id='dropdwn_content'>
+    <a href="">Neuer Mitarbeiter</a>
+    <a href="">Aktuelle Mitarbeiter</a>	
+  </div>
+</div>
+</div>

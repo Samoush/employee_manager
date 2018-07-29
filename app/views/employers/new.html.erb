@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag "style" %>
+
+<head>
+  <%= render 'navigation' %>
+
+  <div class='title_box'>
+    <h1 id='title'>Anlegen eines Arbeitgebers</h1>
+  </div>
+</head>
+
+<div class='formular'>
+  <%= simple_form_for @employer do |f| %>
+    <%= render 'form', f:f %>
+
+    <div class='row'>
+      <%= f.button :submit, 'Auftraggeber Erstellen' %>
+    </div>
+  <% end %>
+</div>

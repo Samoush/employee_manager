@@ -1,0 +1,16 @@
+.rspec
+/config/config.yml
+/config/database.yml
+/config/secrets.yml
+/spec/tmp/*
+/gems
+Gemfile
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+.byebug_history

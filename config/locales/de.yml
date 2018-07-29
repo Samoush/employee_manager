@@ -1,0 +1,24 @@
+de:
+  simple_form:
+    labels:
+      employer:
+        name: Name
+        address: Adresse
+        contact_person: Kontakt Person 
+        telephone: Telefon
+        email: Email
+        website: Webseite
+        night_addition_in_percent: Nachtzuschlag
+        sunday_addition_in_percent: Sonntagszuschlag
+        holiday_addition_in_percent: Feiertagszuschlag
+    hints:
+      product:
+        name: Name muss angegeben werden.
+        address: Adresse muss angegeben werden.
+        contact_person: Kontakt Person muss angegeben werden.
+        email: Email muss angegeben werden.
+        telephone: Telefon muss angegeben werden.
+        website: Webseite muss angegeben werden.
+        night_addition_in_percent: Nachtzuschlag muss angegeben werden.
+        sunday_addition_in_percent: Sonntagszuschlag muss angegeben werden.
+        holiday_addition_in_percent: Feiertagszuschlag muss angegeben werden.
