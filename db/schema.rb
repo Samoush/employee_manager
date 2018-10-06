@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_09_151919) do
+ActiveRecord::Schema.define(version: 2018_10_06_125353) do
+
+  create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.integer "employee_no"
+    t.integer "lohn_manager_id"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "employers", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "name"
@@ -24,6 +34,22 @@ ActiveRecord::Schema.define(version: 2018_07_09_151919) do
     t.integer "holiday_addition_in_percent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.bigint "employer_id"
+    t.bigint "employee_id"
+    t.time "start_time"
+    t.time "end_time"
+    t.date "date"
+    t.integer "working_hours"
+    t.float "hourly_compensation"
+    t.float "employee_hourly_compensation"
+    t.integer "break_in_minutes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_orders_on_employee_id"
+    t.index ["employer_id"], name: "index_orders_on_employer_id"
   end
 
 end

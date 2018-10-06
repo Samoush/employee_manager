@@ -1,16 +1,22 @@
-require 'lib/clients/lohn_manager.rb'
-require 'lib/parsers/lohn_manager.rb'
+require [Dir.pwd, 'lib', 'clients', 'lohn_manager'].join('/')
+require [Dir.pwd, 'app', 'models', 'employee'].join('/')
 
 class LohnManager
-  def update_employers
-    response = Clients::LohnManager.get_employers
-    parsed_response = Parsers::LohnManager.parse(response)
+  def self.update_employees
+    parsed_employees = Clients::LohnManager.get_employers
 
-    persist_employers!(parsed_response)
+    persist_employers(parsed_employees)
   end
 
-  def persist_employers!
-
+  def self.persist_employers(employees)
+    employees.each do |employee|
+      Employee.create!(
+        firstname: employee[:FirstName],
+        lastname: employee[:LastName],
+        email: employee[:Email],
+        employee_no: employee[:EmployeeNo],
+        lohn_manager_id: employee[:ID]
+      )
+    end
   end
-    
 end
