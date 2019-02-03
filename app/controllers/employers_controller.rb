@@ -12,7 +12,7 @@ class EmployersController < ActionController::Base
     @employer = Employer.new(employer_params)
     if @employer.save
       flash[:notice] = "Arbeitgeber wurde erfolgreich erstellt!"
-      redirect_to :action => 'new'            
+      redirect_to :action => 'index'            
     else
       render 'edit'
     end  
@@ -30,6 +30,13 @@ class EmployersController < ActionController::Base
     else 
       render 'edit'
     end
+  end
+
+  def destroy
+    @employer = Employer.find(params[:id])
+    @employer.destroy
+
+    redirect_to employers_path
   end
 
   private 

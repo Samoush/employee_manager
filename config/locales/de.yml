@@ -11,6 +11,17 @@ de:
         night_addition_in_percent: Nachtzuschlag
         sunday_addition_in_percent: Sonntagszuschlag
         holiday_addition_in_percent: Feiertagszuschlag
+      order:
+        date: Datum
+        start_time: Arbeitsbeginn
+        end_time: Arbeitsende
+        employer_id: Auftraggeber
+        employee_id: Pflegekraft
+        working_hours: Arbeitsstunden
+        hourly_compensation: Stundenlohn
+        employee_hourly_compensation: Pflegekraft Stundenlohn
+        break_in_minutes: Pause in Minuten
+
     hints:
       product:
         name: Name muss angegeben werden.

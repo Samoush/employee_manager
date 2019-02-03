@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_10_06_125353) do
 
-  create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
     t.integer "employee_no"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_10_06_125353) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "employers", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "employers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.string "contact_person"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2018_10_06_125353) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "employer_id"
     t.bigint "employee_id"
     t.time "start_time"

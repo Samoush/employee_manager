@@ -4,16 +4,16 @@
   <%= render 'navigation' %>
 
   <div class='title_box'>
-    <h1 id='title'>Anlegen eines Arbeitgebers</h1>
+    <h1 id='title'>Auftrag Bearbeiten</h1>
   </div>
 </head>
 
 <div class='formular'>
-  <%= simple_form_for @employer do |f| %>
+  <%= simple_form_for @order do |f| %>
     <%= render 'form', f:f %>
 
     <div class='row'>
-      <%= f.button :submit, 'Auftraggeber Erstellen' %>
+      <%= f.button :submit, 'Auftrag Aktualisieren' %>
     </div>
   <% end %>
 </div>

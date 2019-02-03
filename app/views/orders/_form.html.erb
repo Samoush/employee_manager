@@ -1,0 +1,27 @@
+<div class='row'>
+  <%= f.input :date%>
+</div>
+<div class='row'>
+  <%= f.input :start_time, placeholder: 'von' %>
+</div>
+<div class='row'>
+  <%= f.input :end_time, placeholder: 'bis' %>
+</div>
+<div class='row'>
+  <%= f.input :employer_id, collection: @employer_names, selected: @selected_employer_name %>
+</div>
+<div class='row'>
+  <%= f.input :employee_id, collection: @employee_lastnames, selected: @selected_employee_name %>
+</div>
+<div class='row'>
+  <%= f.input :working_hours, placeholder: 'Arbeitsstunden', class: 'number' %>
+</div>
+<div class='row'>
+  <%= f.input :hourly_compensation, placeholder: 'Stundenlohn', class: 'number' %>
+</div>
+<div class='row'>
+  <%= f.input :employee_hourly_compensation, placeholder: 'MA Stundenlohn', class: 'number' %>
+</div>
+<div class='row'>
+  <%= f.input :break_in_minutes, placeholder: 'Pause in Minuten', class: 'number' %>
+</div>

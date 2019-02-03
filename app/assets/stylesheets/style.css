@@ -226,3 +226,24 @@ input[type=submit]:hover {
 .table tr:hover {
 	background-color: #ddd;
 }
+
+/* orders#new */
+.select.optional {
+  margin: 0px;
+  padding: 6px;
+  padding-left: 6px;
+}
+
+.date.required {
+  margin: 0px;
+  padding-top: 6px;
+  padding-right: 19px;
+  padding-bottom: 6px;
+}
+
+.time.required {
+  margin: 0px;
+  padding-top: 6px;
+  padding-right: 19px;
+  padding-bottom: 6px;
+}
