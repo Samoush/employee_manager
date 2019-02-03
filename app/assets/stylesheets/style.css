@@ -222,6 +222,10 @@ input[type=submit]:hover {
   clear: both;
 }
 
+.button {
+  font-size: 25px;
+}
+
 /* Index */
 
 .table {
@@ -259,6 +263,8 @@ input[type=submit]:hover {
   margin: 0px;
   padding: 6px;
   padding-left: 6px;
+
+  font-size: 20px;
 }
 
 .date.required {
@@ -273,4 +279,10 @@ input[type=submit]:hover {
   padding-top: 6px;
   padding-right: 19px;
   padding-bottom: 6px;
+}
+
+.input, .required {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 20px;
 }

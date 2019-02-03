@@ -1,17 +1,17 @@
 <div class='row'>
-  <%= f.input :date%>
+  <%= f.input :date, id: 'field'%>
 </div>
 <div class='row'>
-  <%= f.input :start_time, placeholder: 'von' %>
+  <%= f.input :start_time, placeholder: 'von', id: 'field' %>
 </div>
 <div class='row'>
-  <%= f.input :end_time, placeholder: 'bis' %>
+  <%= f.input :end_time, placeholder: 'bis', id: 'field' %>
 </div>
 <div class='row'>
-  <%= f.input :employer_id, collection: @employer_names, selected: @selected_employer_name %>
+  <%= f.input :employer_id, collection: @employer_names, selected: @selected_employer_name, id: 'field' %>
 </div>
 <div class='row'>
-  <%= f.input :employee_id, collection: @employee_lastnames, selected: @selected_employee_name %>
+  <%= f.input :employee_id, collection: @employee_lastnames, selected: @selected_employee_name, id: 'field' %>
 </div>
 <div class='row'>
   <%= f.input :working_hours, placeholder: 'Arbeitsstunden', class: 'number' %>
