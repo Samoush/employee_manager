@@ -36,7 +36,7 @@
         <td><%= employer.sunday_addition_in_percent %></td>
         <td><%= employer.holiday_addition_in_percent %></td>
         <td><%= link_to 'Bearbeiten', edit_employer_path(id: employer) %></td>
-        <td><%= link_to 'Löschen', employer, method: :delete, data: { confirm: 'Sind Sie sich sicher?' } %></td>
+        <td><%= link_to 'Löschen', employer_path(employer), method: :delete, data: { confirm: 'Sind Sie sich sicher?' } %></td>
       </tr>
     <% end %>
   </tbody>

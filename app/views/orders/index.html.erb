@@ -1,0 +1,44 @@
+<%= stylesheet_link_tag "style" %>
+<head>
+  <%= render 'navigation' %>
+
+  <div class='title_box'>
+    <h1 id='title'>Aufträge</h1>  
+  </div>
+</head>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Datum</th>
+      <th>Von</th>
+      <th>Bis</th>
+      <th>Arbeitgeber</th>
+      <th>Pflegekraft</th>
+      <th>Arbeitsstunden</th>
+      <th>Stundenlohn</th>
+      <th>Pflegekraft Stundenlohn</th>
+      <th>Pause in Minuten</th>
+      <th colspan="2">Aktionen</th>
+    </tr>  
+  </thead>
+
+  <tbody>  
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.formatted_date %></td>
+        <td><%= order.formatted_start_time %></td>
+        <td><%= order.formatted_end_time %></td>
+        <td><%= order.employer_name %></td>
+        <td><%= order.employee_fullname %></td>
+        <td><%= order.working_hours %></td>
+        <td><%= order.formatted_hourly_compensation %></td>
+        <td><%= order.formatted_employee_hourly_compensation %></td>
+        <td><%= order.break_in_minutes %></td>
+        <td><%= link_to 'Bearbeiten', edit_order_path(id: order) %></td>
+        <td><%= link_to 'Löschen', order_path(order), method: :delete, data: { confirm: 'Sind Sie sich sicher?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</br>
