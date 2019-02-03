@@ -90,6 +90,33 @@
 	float: right;
 }
 
+/* nur für Neuer Auftrag*/
+#just_link {
+  font-size: 20px;    
+  border: none;
+  color: red;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  outline: none;
+
+  float: left; /* was ist das ??? warum verändert sich die div block größe dadurch ??? */
+  overflow: hidden; 
+  /*border: 1px solid; */
+}
+
+#just_link:hover {
+  background-color: #aFEEEE;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#just_link a {
+  text-decoration: none;
+  color: red;
+}
+
 /* Formular */
 
 #title {  

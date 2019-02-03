@@ -4,36 +4,40 @@
 
 <title>Employee Manager</title>
 <div id='navbar'>
-<%= image_tag "logo.jpg", id: 'logo' %>
-<div id='btn_link'>
-  <button id="btn" onclick="location.href='/';">
-    <i class="fa fa-home"></i> Home
-  </button>
-</div>
-<div id='btn_link'>
-  <button id="btn" onclick="location.href='index.html';">
-    <i class="fa fa-bar-chart"></i> Arbeitszeit Historie
-  </button>
-</div>
-
-
-<div id='dropdwn'>
-  <button id='dropdwn_btn'>Auftraggeber
-    <i class="fas fa-caret-down"></i>
-  </button>
-  <div id='dropdwn_content'>
-  	<%= link_to "Neuer Auftraggeber", new_employer_path %>
-    <%= link_to "Aktuelle Auftraggeber", employers_path %>
+  <%= image_tag "logo.jpg", id: 'logo' %>
+  <div id='btn_link'>
+    <button id="btn" onclick="location.href='/';">
+      <i class="fa fa-home"></i> Home
+    </button>
   </div>
-</div>
-
-<div id='dropdwn'>
-  <button id='dropdwn_btn'>Mitarbeiter
-    <i class="fas fa-caret-down"></i>
-  </button>
-  <div id='dropdwn_content'>
-    <a href="">Neuer Mitarbeiter</a>
-    <a href="">Aktuelle Mitarbeiter</a>	
+  <div id='btn_link'>
+    <button id="btn" onclick="location.href='index.html';">
+      <i class="fa fa-bar-chart"></i> Arbeitszeit Historie
+    </button>
   </div>
-</div>
+
+
+  <div id='dropdwn'>
+    <button id='dropdwn_btn'>Auftraggeber
+      <i class="fas fa-caret-down"></i>
+    </button>
+    <div id='dropdwn_content'>
+      <%= link_to "Neuer Auftraggeber", new_employer_path %>
+      <%= link_to "Aktuelle Auftraggeber", employers_path %>
+    </div>
+  </div>
+
+  <div id='dropdwn'>
+    <button id='dropdwn_btn'>Mitarbeiter
+      <i class="fas fa-caret-down"></i>
+    </button>
+    <div id='dropdwn_content'>
+      <a href="">Neuer Mitarbeiter</a>
+      <a href="">Aktuelle Mitarbeiter</a>	
+    </div>
+  </div>
+
+  <div id='just_link'>
+    <%= link_to "Neuer Auftrag", new_order_path %>
+  </div>
 </div>
