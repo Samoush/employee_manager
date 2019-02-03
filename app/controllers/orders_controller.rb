@@ -40,9 +40,14 @@ class OrdersController < ActionController::Base
   end
 
   def update
-  	@order = Order.find(params[:id])
-    if @order.update_attributes(order_params)
-      flash[:success] = "Auftraggeber aktualisiert"
+  	employer = fetch_employer_by_name(order_params[:employer_id])
+    employee = fetch_employee_by_lastname(order_params[:employee_id])
+    order_correct_params = order_params
+    order_correct_params[:employer_id] = employer.id
+    order_correct_params[:employee_id] = employee.id
+
+    if @order.update_attributes(order_correct_params)
+      flash[:success] = "Auftrag aktualisiert"
       redirect_to (orders_url)
     else 
       render 'edit'
